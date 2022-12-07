@@ -55,7 +55,9 @@
 			</p>
 			<h3>CAUSAS DE LA CONTAMINACIÓN DEL AGUA: </h3>
 			<p>
-				Los factores naturales, como la filtración del mercurio presente en la corteza de la Tierra, pueden contaminar los océanos, ríos, lagos, canales y embalses. Sin embargo, lo habitual es que el deterioro del agua proceda de las actividades humanas y sus consecuencias, que detallamos a continuación:	
+				Los factores naturales, como la filtración del mercurio presente en la corteza de la Tierra
+				
+				, pueden contaminar los océanos, ríos, lagos, canales y embalses. Sin embargo, lo habitual es que el deterioro del agua proceda de las actividades humanas y sus consecuencias, que detallamos a continuación:	
 			</p>
 			<center>
 				<img height="50%" width="50%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1EO9xwgDikpb2vj1DmuvsmOYgJ2EDrY4wQA&usqp=CAU">
