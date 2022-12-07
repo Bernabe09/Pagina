@@ -1,0 +1,111 @@
+* {
+	font-family: 'Benne', serif;
+}
+
+
+body {
+	background: #F6FFFF;
+	padding: 10px;
+}
+
+.logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header {
+	display: block;
+	background-image: url(https://twenergy.com/wp-content/uploads/2020/09/tipos-de-agua-1280x720.jpg);
+	border-radius: 15px;
+	width: 100%;
+	margin: none;
+}
+
+h3 {
+	display: block;
+	font-size: 20px;
+	filter: contrast(0.9);
+}
+
+
+.contanedor_encabezado {
+	display: inline-block;
+	padding: 10px;
+	height: 110px;
+	border-radius: 10px;
+}
+
+.titulo {
+	font-family: 'Castoro', serif;
+}
+
+.titulo::first-letter{
+	font-size: 2em;
+}
+
+.enlaces {
+	display: inline-block;
+	padding: 10px;
+	margin-left: 80%;
+	font-size: 20px;
+}
+
+a { 
+	direction: ltr;
+}
+
+.titulo {
+	height: 90px ;
+	border-radius: 10px;
+}
+
+div .imagen_texto {
+	float: left;
+	margin: 10px;
+}
+
+ .flora , .text1 p {
+	padding: 30px;
+	font-size: 25px;
+}
+
+.menu {
+	display: flex;
+}
+.menu li {
+	margin: 10px;
+	list-style:none;
+}
+
+.subtitulo1 {
+	font-size: 35px;
+	margin: 20px;
+	filter: contrast(0.9);
+}
+
+p {
+	font-size: 20px;
+	padding: 10px;
+}
+
+.tabla_flora {
+	text-align: center;
+	width: 100%;
+}
+
+th , td {
+	border: double 2px;
+}
+
+img {
+	border-radius: 15px;
+}
+
+footer {
+	background: #596666;
+	width: 100%;
+	height: 50px;
+	border-radius: 10px;
+	padding: 17px;
+}

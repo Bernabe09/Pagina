@@ -1,0 +1,130 @@
+<?php
+	//Conexion a la base de datos(host,usuario,contraseña,nombre_base_de_datos)
+	$conexion=mysqli_connect('127.0.0.1:3307','root','','contaminacionagua_db');
+?>
+<!DOCTYPE html>
+<html>
+	<head><!--Esto no lo puede ver el usuario-->
+		<link rel="icon" type="text/css" href="imagenes\Icono.jpg">
+		<!--Es para el icono de la pestania-->
+		<link rel="stylesheet" type="text/css" href="estilo_index.css">
+		<link rel="stylesheet" type="text/css" href="normalize.css"><!--Para regresara normalizar todas las caracteristicas del navegedor-->
+		<meta charset="utf-8" /> <!--Este funciona para que reconosca el idioma español(cambia la codificacion de la pagina)-->
+		<!--Para la tipografia-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
+		<!-- <- -->
+		<title>Cuidado del agua</title><!--Titulo-->
+	</head>
+	<body><!--Todo dentro de este apartado si lo puede ver-->
+		<header>
+		<div class="contanedor_encabezado">
+			<h1 class="titulo">Contaminacion del agua</h1><!--Encabezado de primer nivel-->
+			<a href=""></a>
+		</div>
+			<a href="https://es.wikipedia.org/wiki/Contaminaci%C3%B3n_h%C3%ADdrica#Efectos_de_la_contaminaci%C3%B3n_del_agua." target="_blank">Mas informacion</a>
+		</header>
+		<hr><!--Linea separadora--->
+		<div>
+			<p>La contaminación hídrica o la contaminación del agua es una modificación de esta, generalmente provocada por el ser humano, que la vuelve impropia o peligrosa para el consumo, la industria, la agricultura, la pesca y las actividades, así como para los animales.</p>
+		</div>
+		<br/><!--Salto de linea---><!----->
+		<ul>
+			<li><a href="">Clima</a></li><!--Etiqueta para otras paginas-->
+			<li><a href="">Contaminacion</a></li>
+			<li><a href="">Economia</a></li>
+			<li><a href="">Fauna</a></li>
+			<li><a href="">Flora</a></li>
+			<li><a href="">Grupos mas afectados</a></li>
+			<li><a href="">Mortalidad</a></li>
+			<li><a href="">Normas</a></li>
+			<li><a href="">Politica</a></li>
+			<li><a href="">Procesos por los que pasa el agua</a></li>
+			<li><a href="">Tecnologias</a></li>
+		</ul>
+		<dir>
+			<h2>Efectos de la contaminacion</h2>
+			<p>
+				El agua que nos proporciona, en sus distintas formas, la naturaleza, no reúne los requisitos para ser consumida de forma directa por el ser humano, debido a la contaminación que contiene. Para lograr la calidad satisfactoria en el agua, y que ésta sea potable, se realizan destilaciones u otros procesos de purificación.
+			</p>
+			<p>	
+				El agua puede contaminarse de diferentes formas, aunque la más común en la actualidad, es mediante descarga de agua servida o cloacas de áreas urbanas en ríos y arroyos.
+			</p>
+			<p>	
+				Otros focos de contaminación de las aguas son los desechos orgánicos provenientes de mataderos de ganado o de aves. El procesamiento de frutas y vegetales requiere grandes cantidades de agua para el lavado, el pelado y blanqueado, lo que produce gran cantidad de agua servida con alto contenido orgánico.
+			</p>
+			<p>
+				Estas concentraciones de materia orgánica originan un alto porcentaje de fosfatos en el agua de los ríos o arroyos en que se descargan. Estos fosfatos ocasionan un rápido crecimiento en la población de algas. Las algas utilizan el oxígeno en gran cantidad, lo que hace que disminuya en el agua la concentración necesaria de este para permitir la respiración de los animales acuáticos, causando su muerte.
+			</p>
+		</dir>
+		<table border="10"><!--tabla border(para que toda la tabla tenga borde)-->
+			<tr><!--Filas-->
+				<td>Nombre Cientifico</td><!--columnas-->
+				<td>Zona De Flora</td>
+				<td>Desventajas De La Desaparicion</td>
+				<td>Cantidad De Flora Desaparecida</td>
+				<td>Fecha De Extinsion</td>
+			</tr>
+			<?php
+			$sql="SELECT * from flora";
+			$result=mysqli_query($conexion,$sql);
+			while($mostrar=mysqli_fetch_array($result)){
+			?>
+			<tr>
+				<td><?php echo $mostrar['nombreCientifico'] ?></td>
+				<td><?php echo $mostrar['zonaDeFlora'] ?></td>
+				<td><?php echo $mostrar['desventajasDeLaDesaparicion'] ?></td>
+				<td><?php echo $mostrar['cantidadDeFloraDesaparecida'] ?></td>
+				<td><?php echo $mostrar['fechaExtinsion'] ?></td>
+			</tr>
+			<?php
+			}
+			?>
+		</table>
+		<hr>
+		<dir>
+			<p>
+				El cuidado del medio ambiente tomó relevancia entre las principales potencial del mundo debido al cambio 		climático y sus repercusiones si no se actúa con políticas que impulsen el cuidado de los recursos naturales.
+			</p>
+			<p>
+				Aunque la contaminación es un problema mundial, los más afectados son los países en desarrollo, consideró Paula Caballero, directora Senior de Medio Ambiente y Recursos Naturales del instituto Práctica Global, que se encarga de la evaluación de las prácticas empresariales y de política pública para preservar el medio ambiente.
+			</p>
+		</dir>
+		<dir>
+			<p>
+				El índice mide (en una escala de 0 a 100) el grado en que los países apliquen políticas para proteger sus entornos naturales, mediante el cálculo de 20 indicadores independientes a través de áreas como la calidad del aire, la agricultura, el clima y la energía.	
+			</p>
+		</dir>
+		<table border="10"><!--tabla border(para que toda la tabla tenga borde)-->
+			<tr><!--Filas-->
+				<td>Pais</td><!--columnas-->
+				<td>Fondos que se destinan</td>
+				<td>Índice de Desempeño Ambiental</td>
+			</tr>
+			<?php
+			$sql="SELECT * from tecnologia";
+			$result=mysqli_query($conexion,$sql);
+			while($mostrar=mysqli_fetch_array($result)){
+			?>
+			<tr>
+				<td><?php echo $mostrar['pais'] ?></td>
+				<td><?php echo $mostrar['cantidadDeFondosDestinados'] ?></td>
+				<td><?php echo $mostrar['indiceDeDesempenoAmbiental'] ?></td>
+			</tr>
+			<?php
+			}
+			?>
+		</table>
+		<hr>
+		<h3>Imagenes</h3>
+		<center><!--Para centrar-->
+			<img width="350px" height="350px" alt="agua" src="imagenes\diamundialdelagua.jpg" title="Agua" />
+			<!--width de alto(Tamaño de la imagen en pixeles) heigth ancho, alt(poner una etiqueta a la imagen) src(direccion de la imagen), title(titulo de la imagen)-->			
+		</center>
+		<footer>
+			<a href="">Contacto</a>
+			<a href="">Mas acerca de mi</a>
+		</footer>
+	</body>
+</html>
